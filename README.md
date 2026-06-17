@@ -3,7 +3,9 @@
 Gillman, S.J.<sup>1</sup>, Pearson, S.F.<sup>2</sup>, Lance, M.M.<sup>2</sup>, Duarte, A.<sup>3</sup>, Gardner, B.<sup>1</sup>
 
 <sup>1</sup>School of Environmental and Forest Sciences, University of Washington, Seattle, Washington 98195, U.S.A.
+
 <sup>2</sup>Washington Department of Fish and Wildlife, Wildlife Science Division, Olympia, Washington 98501, U.S.A.
+
 <sup>3</sup>U.S.D.A. Forest Service, Pacific Northwest Research Station, Olympia, Washington 98512, U.S.A.
 
 

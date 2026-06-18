@@ -1,3 +1,4 @@
+# Details For Files
 
 - `reduced_area.gpkg`
 This is a trimmed version of the study area which has the lower region of Puget Sound removed as it was never surveyed.

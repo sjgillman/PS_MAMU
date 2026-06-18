@@ -8,10 +8,10 @@ CSV version of static covariates for grid cells made in [**02-StaticCovariates.p
 CSV version of static covariates for PSU-segments made in [**02-StaticCovariates.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/02-StaticCovariates.pdf) and used in [**DataAnalysis**](https://github.com/sjgillman/PS_MAMU/blob/main/DataAnalysis).
 
 - `grid_currents.csv`
-Average current speed  for PSU-segments made in [**05-AverageCurrent.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/05-AverageCurrent.pdf) and used in [**DataAnalysis**](https://github.com/sjgillman/PS_MAMU/blob/main/DataAnalysis).
+Average current speed  for PSU-segments made in [**05-AverageCurrents.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/05-AverageCurrents.pdf) and used in [**DataAnalysis**](https://github.com/sjgillman/PS_MAMU/blob/main/DataAnalysis).
 
 - `track_currents.csv`
-Average current speed for PSU-segments made in [**05-AverageCurrent.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/05-AverageCurrent.pdf) and used in [**DataAnalysis**](https://github.com/sjgillman/PS_MAMU/blob/main/DataAnalysis).
+Average current speed for PSU-segments made in [**05-AverageCurrents.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/05-AverageCurrents.pdf) and used in [**DataAnalysis**](https://github.com/sjgillman/PS_MAMU/blob/main/DataAnalysis).
 
 
 - `dynamic_data_clean_grids.rds`

@@ -1,6 +1,6 @@
 # Directory Information
 
-[**01-MakingGrids.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/01-MakingGrids.pdf) This script is used to construct a clean, continuous hexagonal analytical grid over the study area in the Puget Sound region. It uses `reduced_area.gpkg`, `Dclass_cut.gpk`, and `puget_poly.gpkg` located in [**GIS_COVS**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/GIS_COVS).
+[**01-MakingGrids.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/01-MakingGrids.pdf) This script is used to construct a clean, continuous hexagonal analytical grid over the study area in the Puget Sound region. It uses `reduced_area.gpkg`, `Dclass_cut.gpk`, and `puget_poly.gpkg` located in [**GIS_COVS**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/GIS_COVS). Final product is `grid2km_hex.gpkg` located in [**OUTPUTS**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/OUTPUTS) and used to link static and dynamic covariates to specific locations. Grids used throughout the analysis and where density is assigned to.
 
 ## GIS_COVS
 
@@ -8,8 +8,7 @@ These geopackages were created via QGIS or directly in R either as stand alone o
 
 ## OUTPUTS
 
-- `grid2km_hex.gpkg`
-Grids used throughout the analysis and where density is assigned to. Made in **Navy Covariate Processing, Chapter 02: Making Grids**. After that, `reduced_area.gpkg` is used. *Throughout the code, there will be things labeled with 'hex', this is because originally I was using a hexagon shape and later changed to squares. I did not want to change the name throughout the code to left it as hex.*
-    |-- `grid_currents.gpkg` # Average current per grid. Made in **Navy Covariate Processing, Chapter 07: Puget Current Data**.
+End products of scripts from [**01-MakingGrids.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/01-MakingGrids.pdf), [**02-StaticCovariates.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/02-StaticCovariates.pdf),
+
 
 

@@ -7,7 +7,7 @@
 
 [**HDS_Model.R**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/HDS_Model.R) This is the model code. It is structured to run on a HCP system as an array whereby three chains are run on separate nodes.
 - Uses `formatted_data_2026.RData` located in [**DataFiles**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/DataFiles)
-- Final product are three separate chain outputs in the [**Results**](https://github.com/sjgillman/PS_MAMU/blob/main/PostProcessing/Results) in the PostProcessing directory.
+- Final product are three separate chain outputs in the [**RESULTS**](https://github.com/sjgillman/PS_MAMU/blob/main/PostProcessing/RESULTS) in the PostProcessing directory.
 
 ## DataFiles
 Files required to format the data and run model.

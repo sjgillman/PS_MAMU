@@ -10,6 +10,14 @@ The geopackage for the [Dethier Class](https://www.eopugetsound.org/habitats/sho
 This is a single polygon feature that is the shape of the waters to the shoreline of Puget Sound. Made in **Covariate Processing** [**01-MakingGrids.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/01-MakingGrids.pdf) and slightly cropped in **QGIS**.
 Used throughout the analysis.
 
+- `pmep_biotic_habitat.gpkg`
+**The Pacific Marine and Estuarine Fish Habitat Partnership**. Coastal and Marine Ecological Classification Standard (CMECS) out to -200 [Biotic Component](https://www.pacificfishhabitat.org/data/estuarine-biotic-habitat) (BC), Substrate Component (SC), and the nearshore zonal data and [current estuary extents](West Coast USA Current and Historical Estuary Extent).
+*Did not end up using in analysis.*
+
+- `pmep_substrate_habitat.gpkg`
+**The Pacific Marine and Estuarine Fish Habitat Partnership**. Coastal and Marine Ecological Classification Standard (CMECS) out to -200 [Biotic Component](https://www.pacificfishhabitat.org/data/estuarine-biotic-habitat) (BC), Substrate Component (SC), and the nearshore zonal data and [current estuary extents](West Coast USA Current and Historical Estuary Extent).
+Used in [**02-StaticCovariates**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/02-StaticCovariates.pdf)
+
 - `CO-OPS_Regional_Zoning.gpkg`
 **This is the original file** [CO-OPS Regional Zoning](https://www.arcgis.com/home/item.html?id=20fbff7c96fe4afebbf92e2c9a89b856) used to determine the tidal information for areas outside of the station locations.
 Used in **06-TidalData.pdf**
@@ -22,14 +30,4 @@ Used in **Navy Covariate Processing, Chapter 07: Puget Current Data**
 polygons of navy PSUs I created in **QGIS** from the **Navy GPS Files** previously provided to me.
 Used in **Navy Covariate Processing, Chapter 05: Tracklines**
 
-- `pmep_biotic_habitat.gpkg`
-**The Pacific Marine and Estuarine Fish Habitat Partnership**. Coastal and Marine Ecological Classification Standard (CMECS) out to -200 [Biotic Component](https://www.pacificfishhabitat.org/data/estuarine-biotic-habitat) (BC), Substrate Component (SC), and the nearshore zonal data and [current estuary extents](West Coast USA Current and Historical Estuary Extent).
-*Did not end up using in analysis.*
 
-- `pmep_substrate_habitat.gpkg`
-**The Pacific Marine and Estuarine Fish Habitat Partnership**. Coastal and Marine Ecological Classification Standard (CMECS) out to -200 [Biotic Component](https://www.pacificfishhabitat.org/data/estuarine-biotic-habitat) (BC), Substrate Component (SC), and the nearshore zonal data and [current estuary extents](West Coast USA Current and Historical Estuary Extent).
-Used in **Navy Covariate Processing, Chapter 03: Static Covariates**
-
-- `pmep_estu_ext.gpkg`
-**The Pacific Marine and Estuarine Fish Habitat Partnership**. Coastal and Marine Ecological Classification Standard (CMECS) out to -200 [Biotic Component](https://www.pacificfishhabitat.org/data/estuarine-biotic-habitat) (BC), Substrate Component (SC), and the nearshore zonal data and [current estuary extents](West Coast USA Current and Historical Estuary Extent).
-Used in **Navy Covariate Processing, Chapter 03: Static Covariates**

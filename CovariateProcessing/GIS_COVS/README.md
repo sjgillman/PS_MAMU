@@ -1,18 +1,21 @@
 # Details For Files
 
+- `all_tracklines_2026_final.gpkg`
+PSU-segment level tracklines for every survey recorded. A total of 8,095 PSU-segments which provide the unique ID "trip_date", date, total survey effort length and the multilinestring geometry. Used throughout the analysis starting in [**02-StaticCovariates**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/02-StaticCovariates.pdf). Compressed for downloadability.
+
 - `reduced_area.gpkg`
 This is a trimmed version of the study area which has the lower region of Puget Sound removed as it was never surveyed.
 It is used throughout the processing and analysis.
 
 - `Dclass_cut.gpkg`
-The geopackage for the [Dethier Class](https://www.eopugetsound.org/habitats/shore-types) which was adapted from the WA ShoreZone Inventory in 2014. The html provides further description. It is simply the clipped version within the study in gpkg format of the downloadable file from the link above. The clipping was originally done in QGIS. The gpkg is used as the shoreline for clipping purposes and to assign shoretype. Used in [**01-MakingGrids.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/01-MakingGrids.pdf) and [**02-StaticCovariates**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/02-StaticCovariates.pdf) to assign major shoreline types.
+The geopackage for the [Dethier Class](https://www.eopugetsound.org/habitats/shore-types) which was adapted from the WA ShoreZone Inventory in 2014. The html provides further description. It is simply the clipped version within the study in gpkg format of the downloadable file from the link above. The clipping was originally done in QGIS. Used in [**01-MakingGrids.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/01-MakingGrids.pdf) for clipping purposes and [**02-StaticCovariates**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/02-StaticCovariates.pdf) to assign major shoreline types.
 
 - `puget_poly.gpkg`
 This is a single polygon feature that is the shape of the waters to the shoreline of Puget Sound. Made in **Covariate Processing** [**01-MakingGrids.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/01-MakingGrids.pdf) and slightly cropped in **QGIS**.
 Used throughout the analysis.
 
 - `pmep_substrate_habitat.gpkg`
-**The Pacific Marine and Estuarine Fish Habitat Partnership**. Coastal and Marine Ecological Classification Standard (CMECS) out to -200 [Biotic Component](https://www.pacificfishhabitat.org/data/estuarine-biotic-habitat) (BC), Substrate Component (SC), and the nearshore zonal data and [current estuary extents](West Coast USA Current and Historical Estuary Extent). Compressed for downloadability.
+**The Pacific Marine and Estuarine Fish Habitat Partnership**. Coastal and Marine Ecological Classification Standard (CMECS) out to -200 Substrate Component (SC). Used to assign major seafloor substrate type. Compressed for downloadability.
 Used in [**02-StaticCovariates**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/02-StaticCovariates.pdf)
 
 - `CO-OPS_Regional_Zoning.gpkg`
@@ -20,7 +23,7 @@ Used in [**02-StaticCovariates**](https://github.com/sjgillman/PS_MAMU/blob/main
 Used in **06-TidalData.pdf**
 
 - `SSM_mesh.gpkg`
-I made with QGIS from the [Salish Sea Model was developed by Pacific Northwest National Laboratory (PNNL)](https://ecology.wa.gov/research-data/data-resources/models-spreadsheets/modeling-the-environment/salish-sea-modeling). The original file is a `geodatabase` file located on the [SSM's Downloadable Files Site](https://fortress.wa.gov/ecy/ezshare/EAP/SalishSea/SalishSeaModelBoundingScenarios.html) under the *Geographical Information System files* section. The original geodatabase is also included with the other original spatial files called `SSM_grid_web 2.gdb`.
+I made with QGIS from the [Salish Sea Model was developed by Pacific Northwest National Laboratory (PNNL)](https://ecology.wa.gov/research-data/data-resources/models-spreadsheets/modeling-the-environment/salish-sea-modeling). The original file is a `geodatabase` file located on the [SSM's Downloadable Files Site](https://fortress.wa.gov/ecy/ezshare/EAP/SalishSea/SalishSeaModelBoundingScenarios.html) under the *Geographical Information System files* section.
 Used in **Navy Covariate Processing, Chapter 07: Puget Current Data**
 
 - `navy_edit_psu.gpkg`

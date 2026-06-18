@@ -1,6 +1,6 @@
 # Directory Information
 
-[**01-MakingGrids.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/01-MakingGrids.pdf) This script is used to construct a clean, continuous hexagonal analytical grid over the study area in the Puget Sound region. It uses `reduced_area.gpkg`, `Dclass_cut.gpk`, and `puget_poly.gpkg` located in [**GIS_COVS**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/GIS_COVS). Final product is `grid2km_hex.gpkg` located in [**OUTPUTS**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/OUTPUTS) and used to link static and dynamic covariates to specific locations. Grids used throughout the analysis and where density is assigned to.
+[**01-MakingGrids.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/01-MakingGrids.pdf) This script is used to construct a clean, continuous hexagonal analytical grid over the study area in the Puget Sound region. It uses `reduced_area.gpkg`, `Dclass_cut.gpk`, and `puget_poly.gpkg` located in [**GIS_COVS**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/GIS_COVS). Final product is `grid2km_hex.gpkg` located in [**OUTPUTS**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/OUTPUTS) and used to link static and dynamic covariates to specific locations. Grids used throughout the analysis and where density is assigned to. Rmarkdown and R Script versions of pdf can be found in [**RSCRIPTS**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/RSCRIPTS)
 
 ## GIS_COVS
 

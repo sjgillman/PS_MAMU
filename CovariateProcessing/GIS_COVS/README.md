@@ -13,10 +13,10 @@ Used throughout the analysis.
 
 - `pmep_biotic_habitat.gpkg`
 **The Pacific Marine and Estuarine Fish Habitat Partnership**. Coastal and Marine Ecological Classification Standard (CMECS) out to -200 [Biotic Component](https://www.pacificfishhabitat.org/data/estuarine-biotic-habitat) (BC), Substrate Component (SC), and the nearshore zonal data and [current estuary extents](West Coast USA Current and Historical Estuary Extent).
-*Did not end up using in analysis.*
+*Did not end up using in analysis.* Compressed for downloadability.
 
 - `pmep_substrate_habitat.gpkg`
-**The Pacific Marine and Estuarine Fish Habitat Partnership**. Coastal and Marine Ecological Classification Standard (CMECS) out to -200 [Biotic Component](https://www.pacificfishhabitat.org/data/estuarine-biotic-habitat) (BC), Substrate Component (SC), and the nearshore zonal data and [current estuary extents](West Coast USA Current and Historical Estuary Extent).
+**The Pacific Marine and Estuarine Fish Habitat Partnership**. Coastal and Marine Ecological Classification Standard (CMECS) out to -200 [Biotic Component](https://www.pacificfishhabitat.org/data/estuarine-biotic-habitat) (BC), Substrate Component (SC), and the nearshore zonal data and [current estuary extents](West Coast USA Current and Historical Estuary Extent). Compressed for downloadability.
 Used in [**02-StaticCovariates**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/02-StaticCovariates.pdf)
 
 - `CO-OPS_Regional_Zoning.gpkg`

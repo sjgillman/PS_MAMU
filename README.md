@@ -11,8 +11,6 @@ Gillman, S.J.<sup>1</sup>, Pearson, S.F.<sup>2</sup>, Lance, M.M.<sup>2</sup>, D
 
 R code and data submitted for review to the journal *Ecology and Evolution*
 
-<p align="center"><img src="PostProcessing/RESULTS/Figures/coverimage.png" width="50%" alt="Cover image"></p>
-
 ---
 
 ## Repository Directory
@@ -21,4 +19,6 @@ R code and data submitted for review to the journal *Ecology and Evolution*
 - **[DataAnalysis](https://github.com/sjgillman/PS_MAMU/tree/main/DataAnalysis)**: Contains code for formatting observation data, modeling, analysis, and results.
 - **[PostProcessing](https://github.com/sjgillman/PS_MAMU/tree/main/PostProcessing)**: Contains code to estimate posterior probabilities and create figures.
 
+---
 
+<p align="center"><img src="PostProcessing/RESULTS/Figures/coverimage.png" width="50%" alt="Cover image"></p>

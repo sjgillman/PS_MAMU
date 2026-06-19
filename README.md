@@ -22,5 +22,5 @@ R code and data submitted for review to the journal *Ecology and Evolution*
 
 ---
 
-![Chapter 1](PostProcessing/RESULTS/Figures/coverimage.png)
+![Chapter 1](PostProcessing/RESULTS/Figures/coverimage.png){width=50%}
 

@@ -6,7 +6,7 @@
 
 
 [**HDS_Model.R**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/HDS_Model.R) This is the model code. It is structured to run on a HCP system as an array whereby three chains are run on separate nodes.
-- Uses `formatted_data_2026.RData` located in [**DataFiles**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/DataFiles)
+- Uses `formatted_data_2026_NEW.RData` located in [**DataFiles**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/DataFiles)
 - Final product are three separate chain outputs in the [**RESULTS**](https://github.com/sjgillman/PS_MAMU/blob/main/PostProcessing/RESULTS) in the PostProcessing directory.
 
 [**SubsettingModelOutputs.R**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/SubsettingModelOutputs.R) This code is used to take model outputs from [**HDS_Model.R**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/HDS_Model.R) that were originally large `RData` files and breaks them up into smaller `rds` files so they can be uploaded to github & used for the rest of the analysis.

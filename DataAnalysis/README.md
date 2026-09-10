@@ -1,16 +1,16 @@
 # Directory Information
 
-[**07-FormattingData.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/07-Formatting.pdf) This script is used to check candidiate covariates and prepare data for inputting into the the model.
+[**07-FormattingData.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/DataAnalysis/07-Formatting.pdf) This script is used to check candidiate covariates and prepare data for inputting into the the model.
   - It uses `dynamic_data_clean_grids_NEW.rds`, `dynamic_data_clean_tracks_NEW.rds`, `all_static_covs.csv`, `all_static_tacks.csv`, `grid_currents.csv`, `track_currents.csv` located in [**OUTPUTS**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/OUTPUTS) and `track_obs_info.Rdata` located in [**DataFiles**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/DataFiles). Further details on `track_obs_info.Rdata` is included in the code.
-  - Final product is `formatted_data_2026_NEW.RData` and `Survey_Grid_info_NEW.RData` located in [**DataFiles**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/DataFiles) and used in the [**HDS_Model**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/HDS_Model.R) and [**PostProcessing**](https://github.com/sjgillman/PS_MAMU/blob/main/PostProcessing).
+  - Final product is `formatted_data_2026_NEW.RData` and `Survey_Grid_info_NEW.RData` located in [**DataFiles**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/DataFiles) and used in the [**HDS_Model**](https://github.com/sjgillman/PS_MAMU/blob/main/DataAnalysis/HDS_Model.R) and [**PostProcessing**](https://github.com/sjgillman/PS_MAMU/blob/main/PostProcessing).
 
 
 [**HDS_Model.R**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/HDS_Model.R) This is the model code. It is structured to run on a HCP system as an array whereby three chains are run on separate nodes.
 - Uses `formatted_data_2026_NEW.RData` located in [**DataFiles**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/DataFiles)
 - Final product are three separate chain outputs in the [**RESULTS**](https://github.com/sjgillman/PS_MAMU/blob/main/PostProcessing/RESULTS) in the PostProcessing directory.
 
-[**SubsettingModelOutputs.R**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/SubsettingModelOutputs.R) This code is used to take model outputs from [**HDS_Model.R**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/HDS_Model.R) that were originally large `RData` files and breaks them up into smaller `rds` files so they can be uploaded to github & used for the rest of the analysis.
-- Uses `CH1_nSQ_results_1.RData`, `CH1_nSQ_results_2.RData`, `CH1_nSQ_results_3.RData` from [**HDS_Model.R**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/HDS_Model.R)
+[**SubsettingModelOutputs.R**](https://github.com/sjgillman/PS_MAMU/blob/main/DataAnalysis/SubsettingModelOutputs.R) This code is used to take model outputs from [**HDS_Model.R**](https://github.com/sjgillman/PS_MAMU/blob/main/DataAnalysis/HDS_Model.R) that were originally large `RData` files and breaks them up into smaller `rds` files so they can be uploaded to github & used for the rest of the analysis.
+- Uses `CH1_nSQ_results_1.RData`, `CH1_nSQ_results_2.RData`, `CH1_nSQ_results_3.RData` from [**HDS_Model.R**](https://github.com/sjgillman/PS_MAMU/blob/main/DataAnalysis/HDS_Model.R)
 - Final files are in [**RESULTS**](https://github.com/sjgillman/PS_MAMU/blob/main/PostProcessing/RESULTS) and the subfolder "GOF" within it.
 
 ## DataFiles

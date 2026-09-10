@@ -37,7 +37,7 @@
 
 [**06-CombineDynamicCovariates.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/06-CombineDynamicCovariates.pdf) Final script for combining dynamic covariates together from [**03-DynamicCovariates.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/03-DynamicCovariates.pdf) and [**04-TidalData.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/04-TidalData.pdf).
   - It uses `all_tracks_2026_final.gpkg` and `lat_long_times.rds` located in [**GIS_COVS**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/GIS_COVS), `grid2km_hex.gpkg` located in [**OUTPUTS**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/OUTPUTS), and intermediate files created in [**03-DynamicCovariates.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/03-DynamicCovariates.pdf) and [**04-TidalData.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/04-TidalData.pdf).
- - Final products are `dynamic_data_clean_grids.rds` and `dynamic_data_clean_tracks.rds` in [**OUTPUTS**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/OUTPUTS) and are used in [**DataAnalysis**](https://github.com/sjgillman/PS_MAMU/blob/main/DataAnalysis).
+ - Final products are `dynamic_data_clean_grids_NEW.rds` and `dynamic_data_clean_tracks_NEW.rds` in [**OUTPUTS**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/OUTPUTS) and are used in [**DataAnalysis**](https://github.com/sjgillman/PS_MAMU/blob/main/DataAnalysis).
 
 ## GIS_COVS
 

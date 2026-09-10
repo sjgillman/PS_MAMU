@@ -1,7 +1,7 @@
 # Details For Files
 
 - `track_obs_info.RData`
-contains `ydat_tidal` and `DetectData` and used in [**08-FormattingData.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/08-Formatting.pdf)
+contains `ydat_tidal` and `DetectData` and used in [**07-FormattingData.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/08-Formatting.pdf)
   - `ydat_tidal` has a row for each unique PSU-Segment survey event (8,095).
     - `sID` unique numerical value for each row
     - `trip_date` unique stratum-psu-segment-date ID
@@ -42,9 +42,9 @@ contains `ydat_tidal` and `DetectData` and used in [**08-FormattingData.pdf**](h
     - `BF1` 1 if BF = 1 otherwise 0
     - `BF2` 1 if BF = 2 otherwise 0
 
-- `formatted_data_2026.RData`
-Created in in [**08-FormattingData.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/08-Formatting.pdf) and used in [**HDS_Model.R**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/HDS_Model.R)
+- `formatted_data_2026_NEW.RData`
+Created in in [**07-FormattingData.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/08-Formatting.pdf) and used in [**HDS_Model.R**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/HDS_Model.R)
 
-- `Survey_Grid_Info.RData`
-Created in in [**08-FormattingData.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/08-Formatting.pdf) and used in [**PostProcessing**](https://github.com/sjgillman/PS_MAMU/blob/main/PostProcessing) for predictions.
+- `Survey_Grid_Info_NEW.RData`
+Created in in [**07-FormattingData.pdf**](https://github.com/sjgillman/PS_MAMU/blob/main/CovariateProcessing/08-Formatting.pdf) and used in [**PostProcessing**](https://github.com/sjgillman/PS_MAMU/blob/main/PostProcessing) for predictions.
 

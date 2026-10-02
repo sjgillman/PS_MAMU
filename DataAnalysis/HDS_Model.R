@@ -4,23 +4,25 @@
 # ==============================================================================
 # DATA INFO
 # ==============================================================================
-# "formatted_data_2026.RData" = ydat, detectDF, custom_breaks
-# ydat: dataset with 8085 rows (One row for ever survey); 40 columns
+# "formatted_data_2026_NEW.RData" = ydat, detectDF, custom_breaks
+# ydat: dataset with 8095 rows (One row for ever survey); 42 columns
 # detectDF: individual detection bin info
 # custom_breaks: bin widths for detection
-# Data were created in `08-FormattingData.pdf`
+# Data were created in `07-FormattingData.pdf`
 
 ## Load Packages
 library(tidyverse)
 library(nimble)
 
 ## Load Data
-load("formatted_data_2026.RData")
+load("formatted_data_2026_NEW.RData")
 
 
 
 ## This code is formatted to run the model on UW's HCP, HYAK where by the model
 ## is run as an array on three separate cores and each chain is saved separately
+## R version 4.6.1 (2026-06-24) -- "Happy Hop"
+## nimble version 1.4.3
 
 ## To get Array info
 args <- commandArgs(trailingOnly = TRUE)
@@ -48,15 +50,15 @@ ModelCode <- nimbleCode({
   
   ## getting missing tidal data (survey level data)
   mu_tide ~ dnorm(0, sd = 2)      # Global mean tide
-  sig_tide ~ dunif(0, 5)        # Variability in tide
+  sd_tide ~ dunif(0, 5)        # Variability in tide
   
   # Tidal Height
   beta ~ dnorm(0, sd =1)
   
   # Random effects: Observer Pairs
-  sig_pair ~ dunif(0,1.5) # Hyperparameter for observer pairs
+  sd_pair ~ dunif(0,1.5) # Hyperparameter for observer pairs
   for (t in 1:max(PAIRS)){
-    eps_pair[t] ~ dnorm(0, sd = sig_pair)
+    eps_pair[t] ~ dnorm(0, sd = sd_pair)
   } 
   
   # Abundance: Seasonality and Overdispersion
@@ -65,7 +67,7 @@ ModelCode <- nimbleCode({
   
   ## getting missing Grand tide (monthly averages)
   mu_gt ~ dnorm(0, sd = 2)      # Global mean tide
-  sig_gt ~ dunif(0, 5)        # Variability in tide
+  sd_gt ~ dunif(0, 5)        # Variability in tide
   
   # Year specific overdispersion
   shape_r ~ dexp(1) 
@@ -77,9 +79,9 @@ ModelCode <- nimbleCode({
   
   
   # Random effects: Month
-  sig_mon ~ dunif(0,1.5) # Hyperparameter for Month
+  sd_mon ~ dunif(0,1.5) # Hyperparameter for Month
   for (t in 1:max(MONTH)){
-    eps_mon[t] ~ dnorm(alpha0[MONTHSEASON[t]], sd = sig_mon)
+    eps_mon[t] ~ dnorm(alpha0[MONTHSEASON[t]], sd = sd_mon)
   }
   
   # Lambda Static Coefficients: Depth, BPI, RIE;
@@ -95,19 +97,6 @@ ModelCode <- nimbleCode({
     }
   }
   
-  ## Group Size Hyperparameters ##
-  mu_delta ~ dnorm(0, sd = 0.5) # global mean
-  sig_delta ~ dunif(0, 1)       # gs SD
-  
-  # ----------------------------------------------------------------------------
-  # SUB-MODELS: Group Size & Detection Scale
-  # ----------------------------------------------------------------------------
-  
-  for (m in 1:nMY) {
-    delta0[m] ~ dnorm(mu_delta, sd = sig_delta) # Group Size Intercept
-    gs.lam[m] <- exp(delta0[m])                 # Expected Group Size 
-    gs.expected[m] <- gs.lam[m]+1               # Add back 1
-  } 
   
   # ----------------------------------------------------------------------------
   # LIKELIHOODS
@@ -121,7 +110,7 @@ ModelCode <- nimbleCode({
   
   for (r in 1:nS){
     # get missing tide data
-    SIG_COV[r] ~ dnorm(mu_tide, sd = sig_tide)
+    SIG_COV[r] ~ dnorm(mu_tide, sd = sd_tide)
     
     # Scale Parameter Calculation
     sigma[r] <- exp(sigma0[BF[r]] + SIG_COV[r]*beta + eps_pair[PAIRS[r]])
@@ -131,9 +120,6 @@ ModelCode <- nimbleCode({
     
     # Overall pcap over the full strip width
     pcap[r] <- esw[r] / w
-    
-    ## Group Size ##
-    GS[r] ~ dpois(C[r] * gs.lam[MONTHYEAR[r]])
     
     # ----------------------------------------------------------------------------
     # SUB-MODELS: Counts & Latent Density
@@ -148,7 +134,7 @@ ModelCode <- nimbleCode({
     
     ## Linear Predictor for Expected density ## Effort = log-transformed area surveyed
     # get missing tide data
-    DYNAMIC[r, 4] ~ dnorm(mu_gt, sd = sig_gt)
+    DYNAMIC[r, 4] ~ dnorm(mu_gt, sd = sd_gt)
     
     log(lambda[r]) <-  eps_mon[MONTH[r]]+ 
       EFFORT[r] +
@@ -225,11 +211,10 @@ nimData <- list(
   ## DATA ##
   C = ydat$totobs,
   DIST = as.integer(detectDF$perp_dist),
-  GS = ydat$sum_gsminus1,
   EFFORT = log(ydat$effort),
   SIG_COV = ydat$tidal_scale,
-  STAT_COVS = as.matrix(ydat[c(21:38)]),
-  DYNAMIC = as.matrix(ydat[,c(15:20)]))
+  STAT_COVS = as.matrix(ydat[c(22:39)]),
+  DYNAMIC = as.matrix(ydat[,c(16:21)]))
 
 # ==============================================================================
 # INITIAL VALUES
@@ -249,26 +234,21 @@ make_inits <- function(nimData, nimConstants){
     sigma0 = rep(log(100),3),
     SIG_COV = SIG_init,
     beta = rnorm(1, 0, 0.1),
-    sig_pair = runif(1,0,0.5),
+    sd_pair = runif(1,0,0.5),
     eps_pair = rep(0, max(nimConstants[["PAIRS"]])),
     mu_tide = tide_mean,            
-    sig_tide = 1,                  
-    
-    # group size
-    mu_delta = rnorm(1,0,1),
-    sig_delta = runif(1,0.3,0.6),
-    delta0 = rnorm(max(nimConstants[["MONTHYEAR"]]), 0, 0.1),
+    sd_tide = 1,                  
     
     # abundance
     N = nimData[["C"]]+5,
     DYNAMIC = DYNAM_init,
     mu_gt = gt_mean,                 
-    sig_gt = 1,
+    sd_gt = 1,
     shape_r = 1,
     rate_r = 1,
     rN = rep(1, max(nimConstants[["MONTHYEAR"]])),
     alpha0 = rnorm(2,0,0.5),
-    sig_mon = runif(1,0,0.5),
+    sd_mon = runif(1,0,0.5),
     eps_mon = rep(0, max(nimConstants[["MONTH"]])),
     alpha_stat = rnorm(18,0,0.5),
     alpha_sea = matrix(rnorm(12, 0,0.5), nrow = 2, ncol = 6))
@@ -283,21 +263,19 @@ init <- make_inits(nimData, nimConstants)
 
 params <- c(
   # Detection
-  "sigma0","beta","sig_pair",
+  "sigma0","beta","sd_pair",
   "eps_pair",
-  "sig_tide", "mu_tide",
+  "sd_tide", "mu_tide",
   # Abundance
-  "alpha0","eps_mon","sig_mon",
+  "alpha0","eps_mon","sd_mon",
   "shape_r","rate_r","alpha_sea",
   "alpha_stat",
-  "sig_gt","mu_gt",
-  # Group Size
-  "mu_delta","sig_delta","gs.expected",
+  "sd_gt","mu_gt",
   # Derived
   "sigma_mean", "pcap_mean")
 
 # Additional Monitors
-param_GoF <- c("lambda", "N", "rN","gs.lam","pcap")
+param_GoF <- c("lambda", "N", "rN","pcap")
 
 
 
@@ -320,8 +298,8 @@ confMod <- configureMCMC(Rmodel, monitors = params, monitors2 = param_GoF)
 Rmcmc <- buildMCMC(confMod)
 Cmcmc <- compileNimble(Rmcmc, project = Rmodel)
 
-nburn <- 125000
-ni <- nburn + 50000
+nburn <- 115000
+ni <- nburn + 85000
 nt <- 10
 
 (start <- Sys.time())   

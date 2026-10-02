@@ -1,4 +1,4 @@
-# Predicting density and assessing factors driving marbled murrelet distribution in Puget Sound using hierarchical distance sampling
+# Assessing factors driving marbled murrelet distribution and density in Puget Sound using hierarchical distance sampling
 
 ### Code by S.J. Gillman
 

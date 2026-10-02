@@ -1,5 +1,4 @@
-# Assessing factors driving marbled murrelet distribution and density in Puget Sound using hierarchical distance sampling![Uploading image.png…]()
- (2026)
+# Assessing factors driving marbled murrelet distribution and density in Puget Sound using hierarchical distance sampling (2026)
 
 Gillman, S.J.<sup>1</sup>, Pearson, S.F.<sup>2</sup>, Lance, M.M.<sup>2</sup>, Duarte, A.<sup>3</sup>, Gardner, B.<sup>1</sup>
 

@@ -11,6 +11,8 @@ Gillman, S.J.<sup>1</sup>, Pearson, S.F.<sup>2</sup>, Lance, M.M.<sup>2</sup>, D
 
 R code and data submitted for review to the journal *Ecology and Evolution*
 
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23699918.svg)](https://doi.org/10.5281/zenodo.23699918)
 ---
 
 ## Repository Directory
